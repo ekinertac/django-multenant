@@ -1,7 +1,7 @@
 from django.apps import apps
 from django.conf import settings
 
-from multitenant.middleware import get_current_db_name
+from multenant.middleware import get_current_db_name
 
 
 class TenantDatabaseRouter(object):

@@ -2,8 +2,8 @@ import threading
 
 from django.shortcuts import redirect
 
-from multitenant.models import Tenant
-from .utils import get_tenant_name_from_request
+from multenant.models import Tenant
+from multenant.utils import get_tenant_name_from_request
 
 THREAD_LOCAL = threading.local()
 

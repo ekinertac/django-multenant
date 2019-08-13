@@ -4,7 +4,7 @@ import uuid
 
 from django.conf import settings
 
-from multitenant.drivers.redis import rget, rset, rget_all_keys
+from multenant.drivers.redis import rget, rset, rget_all_keys
 
 
 def uuid_random_string(length=16):

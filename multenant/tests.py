@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from multitenant.models import Tenant
+from multenant.models import Tenant
 
 
 class TestTenantCase(TestCase):

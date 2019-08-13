@@ -3,9 +3,9 @@ from django.core.management import call_command
 from django.db import models, connections
 from django.db.models.signals import post_save
 
-from multitenant.drivers.redis import rset
-from multitenant.drivers.utils import create_database
-from multitenant.utils import uuid_random_string, get_tenant_databases
+from multenant.drivers.redis import rset
+from multenant.drivers.utils import create_database
+from multenant.utils import uuid_random_string, get_tenant_databases
 
 
 class Tenant(models.Model):
@@ -18,7 +18,7 @@ class Tenant(models.Model):
 
     @property
     def database(self):
-        return f"multitenant_{self.unique_key}"
+        return f"multenant_{self.unique_key}"
 
     def save(self, *args, **kwargs):
         self.unique_key = uuid_random_string()

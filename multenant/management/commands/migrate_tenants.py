@@ -2,7 +2,7 @@ from django.core.management import call_command
 from django.core.management.base import BaseCommand, CommandError
 from django.core.management.commands.migrate import Command as MigrateCommand
 
-from multitenant.utils import get_tenant_databases
+from multenant.utils import get_tenant_databases
 
 
 class Command(BaseCommand):

@@ -1,5 +1,5 @@
-from multitenant.drivers.psql import psql_connection
-from multitenant.drivers.sqlite import sqlite3_connection
+from multenant.drivers.psql import psql_connection
+from multenant.drivers.sqlite import sqlite3_connection
 
 
 def create_database(specs, db_name):
