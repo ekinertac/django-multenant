@@ -45,7 +45,7 @@ class DisallowTenantUserCrossSwitch:
                 return response
             else:
                 protocol = 'https' if request.is_secure() else 'http'
-                return redirect(f"{protocol}://{request.user.tenant.subdomain}.tenant.local:8000/")
+                return redirect(f"{protocol}://{request.user.tenant.subdomain}.{request.META['HTTP_HOST']}/")
 
         return response
 
